@@ -4,93 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joey Lee | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
-
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
       background: #fff0f5;
       color: #5a2a38;
-      transition: background 0.3s ease-in-out;
     }
-
     header {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2rem;
       background: linear-gradient(to bottom, #ffd3e0, #fff0f5);
-      animation: fadeIn 1s ease-in-out;
     }
-
     header img {
       border-radius: 50%;
       width: 120px;
       height: 120px;
       object-fit: cover;
       border: 3px solid #f8c1d3;
-      margin-bottom: 1rem;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-
-    p {
-      max-width: 600px;
-      margin: 0.5rem auto;
-      font-size: 1rem;
-      color: #6b4b5b;
-    }
-
-    .filters {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-
-    .filters button {
+    h1 { font-size: 2.5rem; margin-top: 1rem; }
+    p { max-width: 600px; margin: 0.5rem auto; font-size: 1rem; color: #6b4b5b; }
+    .resume-button {
       background: #f78fb3;
       color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
+      padding: 0.75rem 1.25rem;
+      text-decoration: none;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
     }
-
-    .filters button:hover {
-      background: #e66b99;
-    }
-
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      animation: fadeIn 1s ease-in-out;
     }
-
     .card {
       background: #ffeaf2;
       border: 2px solid #f8c1d3;
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 5px 12px rgba(255, 192, 203, 0.2);
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition: 0.3s ease;
     }
-
-    .card.hide {
-      opacity: 0;
-      transform: scale(0.9);
-      pointer-events: none;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #b03060;
-    }
-
+    .card h3 { color: #b03060; margin-top: 0; }
+    .card p { font-size: 0.95rem; color: #4a2c35; }
     .card a {
       display: inline-block;
       margin-top: 1rem;
@@ -101,77 +62,57 @@
       border-radius: 8px;
       font-weight: bold;
     }
-
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #906174;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <img src="your-photo-new.jpg" alt="Joey Lee" />
-  <h1>Joey Lee</h1>
-  <p>✨ Marketing Analytics | Data Storyteller | Creative Analyst ✨<br>
-  Exploring data and making it beautiful, one insight at a time.</p>
-</header>
-
-<div class="filters">
-  <button onclick="filterProjects('all')">All</button>
-  <button onclick="filterProjects('data')">Data</button>
-  <button onclick="filterProjects('marketing')">Marketing</button>
-</div>
-
-<section class="projects">
-  <div class="card" data-category="data">
-    <h3>Uber Fare Prediction</h3>
-    <p>Predicted ride prices using regression models on 600K+ rows of data with 90% accuracy.</p>
-    <a href="#">View Project</a>
-  </div>
-
-  <div class="card" data-category="marketing">
-    <h3>Netflix Marketing Strategy</h3>
-    <p>Analyzed pricing sentiment and developed segmentation strategies using survey data.</p>
-    <a href="#">View Project</a>
-  </div>
-
-  <div class="card" data-category="data">
-    <h3>Ice Cream Sentiment Analysis</h3>
-    <p>Used NLP to discover flavor trends and customer sentiment across 10+ brands.</p>
-    <a href="#">View Project</a>
-  </div>
-
-  <div class="card" data-category="marketing">
-    <h3>Sun Country Airlines Case</h3>
-    <p>Route optimization and strategic planning using airline operation metrics.</p>
-    <a href="#">View Project</a>
-  </div>
-</section>
-
-<footer>
-  Made with 💕 by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
-</footer>
-
-<script>
-  function filterProjects(category) {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      if (category === 'all' || card.dataset.category === category) {
-        card.classList.remove('hide');
-      } else {
-        card.classList.add('hide');
-      }
-    });
-  }
-</script>
-
+  <header>
+    <img src="your-photo-new.jpg" alt="Joey Lee" />
+    <h1>Joey Lee</h1>
+    <p>✨ MSBA @ UC Irvine | Data Storyteller | Creative Analyst ✨<br>
+    Turning insights into strategy across business, marketing, and healthcare.</p>
+    <a class="resume-button" href="Joey_Lee_Resume.pdf" download>📄 Download My Resume</a>
+  </header>
+  <section class="projects">
+    <div class="card">
+      <h3>🏥 Abbott Biowearables Strategy</h3>
+      <p>Analyzed Abbott's CGM devices and healthcare economics to assess long-term value in chronic care and digital health adoption.</p>
+      <a href="#">View Case</a>
+    </div>
+    <div class="card">
+      <h3>📊 Dating App Dynamics</h3>
+      <p>Performed statistical tests to explore gender-based differences in Tinder match rates and dating outcomes.</p>
+      <a href="#">View Report</a>
+    </div>
+    <div class="card">
+      <h3>💄 Skincare Recommendation Engine</h3>
+      <p>Built ML models to classify and recommend cosmetic products based on skin type and price sensitivity using clustering and random forest.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="card">
+      <h3>✈️ Sun Country Airline Segmentation</h3>
+      <p>Segmented customers into five personas using K-means clustering and designed marketing strategies to target loyalty and seasonal travelers.</p>
+      <a href="#">View Dashboard</a>
+    </div>
+    <div class="card">
+      <h3>📉 Netflix Pricing Strategy</h3>
+      <p>Developed customer segmentation and tiered pricing solutions to address churn and competition in the streaming market.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="card">
+      <h3>🍦 Ice Cream Consumer Sentiment</h3>
+      <p>Used sentiment analysis and ingredient breakdown to predict top-performing ice cream flavors across major brands.</p>
+      <a href="#">Explore Results</a>
+    </div>
+  </section>
+  <footer>
+    Made with 💕 by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
+  </footer>
 </body>
 </html>
+
