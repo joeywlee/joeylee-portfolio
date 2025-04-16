@@ -26,7 +26,7 @@
     }
     h1 { font-size: 2.5rem; margin-top: 1rem; }
     p { max-width: 600px; margin: 0.5rem auto; font-size: 1rem; color: #6b4b5b; }
-    .resume-button {
+    .resume-button, .email-button {
       background: #f78fb3;
       color: white;
       padding: 0.75rem 1.25rem;
@@ -34,11 +34,21 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
-      margin-top: 1rem;
+      margin: 1rem 0.5rem 0;
+    }
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .about {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #5a2a38;
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
     }
@@ -52,6 +62,11 @@
     }
     .card h3 { color: #b03060; margin-top: 0; }
     .card p { font-size: 0.95rem; color: #4a2c35; }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
     .card a {
       display: inline-block;
       margin-top: 1rem;
@@ -68,51 +83,72 @@
       font-size: 0.9rem;
       color: #906174;
     }
+    @media screen and (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .projects { padding: 1rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="your-photo-new.jpg" alt="Joey Lee" />
     <h1>Joey Lee</h1>
-    <p>✨ MSBA @ UC Irvine | Data Storyteller | Creative Analyst ✨<br>
+    <p>✨ MSBA @ UC Irvine | Data Storyteller | Aspiring Analyst ✨<br>
     Turning insights into strategy across business, marketing, and healthcare.</p>
     <a class="resume-button" href="Joey_Lee_Resume.pdf" download>📄 Download My Resume</a>
+    <a class="email-button" href="mailto:joey5652@gmail.com">📬 Email Me</a>
   </header>
+
+  <section class="section about">
+    <h2>🪄 About Me</h2>
+    <p>
+      I'm Joey — an aspiring analyst who loves turning complex insights into clear, compelling strategies. With a background in business analytics and hands-on experience in marketing, healthcare, and tech, I build stories from data that inspire action. I thrive in collaborative, cross-functional teams and love merging design thinking with statistical rigor. 
+    </p>
+  </section>
+
   <section class="projects">
     <div class="card">
       <h3>🏥 Abbott Biowearables Strategy</h3>
       <p>Analyzed Abbott's CGM devices and healthcare economics to assess long-term value in chronic care and digital health adoption.</p>
+      <img src="images/abbott_chart.png" alt="Abbott Data Chart">
       <a href="#">View Case</a>
     </div>
     <div class="card">
       <h3>📊 Dating App Dynamics</h3>
       <p>Performed statistical tests to explore gender-based differences in Tinder match rates and dating outcomes.</p>
+      <img src="images/tinder_trends.png" alt="Dating Analysis">
       <a href="#">View Report</a>
     </div>
     <div class="card">
       <h3>💄 Skincare Recommendation Engine</h3>
       <p>Built ML models to classify and recommend cosmetic products based on skin type and price sensitivity using clustering and random forest.</p>
+      <img src="images/skincare_model.png" alt="Skin Type Classification">
       <a href="#">View Project</a>
     </div>
     <div class="card">
       <h3>✈️ Sun Country Airline Segmentation</h3>
       <p>Segmented customers into five personas using K-means clustering and designed marketing strategies to target loyalty and seasonal travelers.</p>
+      <img src="images/sun_country_clusters.png" alt="Cluster Graph">
       <a href="#">View Dashboard</a>
     </div>
     <div class="card">
       <h3>📉 Netflix Pricing Strategy</h3>
       <p>Developed customer segmentation and tiered pricing solutions to address churn and competition in the streaming market.</p>
+      <img src="images/netflix_strategy.png" alt="Netflix Strategy Chart">
       <a href="#">Read More</a>
     </div>
     <div class="card">
       <h3>🍦 Ice Cream Consumer Sentiment</h3>
       <p>Used sentiment analysis and ingredient breakdown to predict top-performing ice cream flavors across major brands.</p>
+      <img src="images/icecream_sentiment.png" alt="Ice Cream Sentiment Chart">
       <a href="#">Explore Results</a>
     </div>
   </section>
+
   <footer>
-    Made with 💕 by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
+    Made with love by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
   </footer>
 </body>
 </html>
+
 
