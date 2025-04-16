@@ -58,7 +58,17 @@
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 5px 12px rgba(255, 192, 203, 0.2);
-      transition: 0.3s ease;
+      transition: 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 16px rgba(247, 143, 179, 0.3);
     }
     .card h3 { color: #b03060; margin-top: 0; }
     .card p { font-size: 0.95rem; color: #4a2c35; }
@@ -93,16 +103,16 @@
   <header>
     <img src="your-photo-new.jpg" alt="Joey Lee" />
     <h1>Joey Lee</h1>
-    <p>✨ MSBA @ UC Irvine | Data Storyteller | Aspiring Analyst ✨<br>
+    <p>✨ MSBA @ UC Irvine | Data Storyteller | Creative Analyst ✨<br>
     Turning insights into strategy across business, marketing, and healthcare.</p>
     <a class="resume-button" href="Joey_Lee_Resume.pdf" download>📄 Download My Resume</a>
-    <a class="email-button" href="mailto:joey5652@gmail.com">📬 Email Me</a>
+    <a class="email-button" href="mailto:joey5652@gmail.com">📬 Email Me!</a>
   </header>
 
   <section class="section about">
-    <h2>🪄 About Me</h2>
+    <h2> About Me</h2>
     <p>
-      I'm Joey — an aspiring analyst who loves turning complex insights into clear, compelling strategies. With a background in business analytics and hands-on experience in marketing, healthcare, and tech, I build stories from data that inspire action. I thrive in collaborative, cross-functional teams and love merging design thinking with statistical rigor. 
+      Hello!! I'm Joey Lee — an aspiring analyst who loves turning complex insights into clear, compelling strategies. With a background in business analytics and hands-on experience in marketing, healthcare, and tech, I build stories from data that inspire action. I thrive in collaborative, cross-functional teams and love merging design thinking with statistical rigor. 
     </p>
   </section>
 
@@ -146,8 +156,25 @@
   </section>
 
   <footer>
-    Made with love by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
+    Made with 💕 by Joey Lee | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
   </footer>
+
+  <script>
+    // Scroll animation
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
 
