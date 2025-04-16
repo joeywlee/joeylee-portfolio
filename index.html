@@ -25,11 +25,13 @@
     border: 3px solid #f8c1d3;
   }
   h1 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
-    color: #b03060;
-    text-shadow: 0 0 10px #f8c1d3aa;
-  }
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #b03060;
+  text-shadow: 0 0 12px #f8c1d3aa;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
   p {
     max-width: 600px;
     margin: 0.5rem auto;
@@ -118,14 +120,19 @@
 </style>
 </head>
 <body>
-  <header>
-    <img src="your-photo-new.jpg" alt="Joey Lee" />
-    <h1>Joey Lee</h1>
-    <p>✨ MSBA @ UC Irvine | Data Storyteller | Creative Analyst ✨<br>
-    Turning insights into strategy across business, marketing, and healthcare.</p>
+  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; padding: 2rem; background: linear-gradient(to bottom, #ffd3e0, #fff0f5);">
+  <img src="images/joey-profile.JPG" alt="Joey Lee Headshot" style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 4px solid #f8c1d3; box-shadow: 0 0 15px #f8c1d3aa;" />
+  
+  <div style="text-align: left; max-width: 500px;">
+    <h1 style="font-size: 3.5rem; margin: 0; color: #b03060; text-shadow: 0 0 12px #f8c1d3aa;">Joey Lee</h1>
+    <p style="font-size: 1.1rem; margin-top: 0.5rem; color: #6b4b5b;">
+      ✨ MSBA @ UC Irvine | Data Storyteller | Aspiring Analyst ✨<br>
+    </p>
     <a class="resume-button" href="Joey_Lee_Resume.pdf" download>📄 Download My Resume</a>
     <a class="email-button" href="mailto:joey5652@gmail.com">📬 Email Me!</a>
-  </header>
+  </div>
+</header>
+
 
   <section class="section about">
     <h2> About Me</h2>
