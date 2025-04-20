@@ -6,305 +6,73 @@
   <title>Joey Lee | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-  :root {
-  --accent: #f78fb3;
-  --highlight: #ffd3e0;
-  --soft-bg: #fff0f5;
-  --text-dark: #4a2c35;
-  --shadow-pink: rgba(247, 143, 179, 0.3);
-}
-
-body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background: var(--soft-bg);
-  color: var(--text-dark);
-}
-
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Divider line between sections */
-.divider {
-  border: 0;
-  height: 6px;
-  background: linear-gradient(to right, var(--highlight), var(--soft-bg));
-  border-radius: 999px;
-  width: 70%;
-  margin: 3rem auto;
-}
-
-  body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    background: #fff0f5;
-    color: #5a2a38;
-  }
-  header {
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(to bottom, #ffd3e0, #fff0f5);
-  }
-  header img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px; 
-    object-fit: cover;
-    border: 3px solid #f8c1d3;
-  }
-  h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 8rem;
-  margin-top: 1rem;
-  color: #b03060;
-  text-shadow: 0 0 12px #f8c1d3aa;
-  letter-spacing: 1px;
-}
-  p {
-    max-width: 600px;
-    margin: 0.5rem auto;
-    font-size: 1rem;
-    color: #6b4b5b;
-  }
-  .resume-button, .email-button, .card a {
-    background: #f78fb3;
-    color: white;
-    padding: 0.75rem 1.25rem;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
-    box-shadow: 0 0 0 transparent;
-    transition: 0.3s ease-in-out;
-  }
-  .resume-button:hover,
-  .email-button:hover,
-  .card a:hover {
-    box-shadow: 0 0 12px #f78fb3aa, 0 0 18px #f78fb3aa;
-    transform: translateY(-2px);
-  }
-  .section {
-    padding: 2rem;
-    text-align: center;
-  }
-  .about {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #5a2a38;
-  }
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-  }
-  .card {
-    background: #ffeaf2;
-    border: 2px solid #f8c1d3;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 12px rgba(255, 192, 203, 0.2);
-    transition: 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  .card.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 16px rgba(247, 143, 179, 0.3);
-  }
-  .card h3 {
-    color: #b03060;
-    margin-top: 0;
-  }
-  .card p {
-    font-size: 0.95rem;
-    color: #4a2c35;
-  }
-  .card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 1rem;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #906174;
-  }
-  @media screen and (max-width: 768px) {
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff0f5;
+      color: #5a2a38;
+      margin: 0;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
+      color: #b03060;
     }
     .projects {
-      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
-  }
-    .project-details {
-  display: none;
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #fff5f9;
-  border: 1px solid #f8c1d3;
-  border-radius: 12px;
-  color: #4a2c35;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.card.open .project-details {
-  display: block;
-}
-</style>
+    .card {
+      background: #ffeaf2;
+      border: 2px solid #f8c1d3;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(247, 143, 179, 0.2);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .card h3 {
+      color: #b03060;
+      margin-top: 1rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      background: #f78fb3;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<script>
-  document.querySelectorAll('.card a').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const card = btn.closest('.card');
-      card.classList.toggle('open');
-    });
-  });
-</script>
-<script>
-  const faders = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  faders.forEach(el => observer.observe(el));
-</script>  
 <body>
-  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; padding: 2rem; background: linear-gradient(to bottom, #ffd3e0, #fff0f5);">
-  <img src="joeylee_portfolio_images/joey-profile.JPG" alt="Joey Lee Headshot" style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 4px solid #f8c1d3; box-shadow: 0 0 15px #f8c1d3aa;" />
-  
-  <div style="text-align: left; max-width: 500px;">
-    <h1 style="font-size: 3.5rem; margin: 0; color: #b03060; text-shadow: 0 0 12px #f8c1d3aa;">Joey Lee</h1>
-    <p style="font-size: 1.1rem; margin-top: 0.5rem; color: #6b4b5b;">
-      ✨ MSBA @ UC Irvine | 22 | Aspiring Analyst ✨<br>
-    </p>
-    <a class="resume-button" href="Joey_Lee_Resume.pdf" download>📄 My Resume</a>
-    <a class="email-button" href="mailto:joey5652@gmail.com">📬 Email Me!</a>
-  </div>
-</header>
+  <header>
+    <h1>Joey Lee</h1>
+    <p>✨ Data Storyteller | Creative Strategist | MSBA @ UC Irvine ✨</p>
+  </header>
 
-
-  <section class="section about">
-    <h2> About Me</h2>
-    <p>
-      Hello!! I'm Joey Lee — an aspiring analyst who loves fitness and turning data into clear, compelling insights. I bring the same intensity to the gym as I do to analytics: I'm disciplined, focused, and constantly chasing progress. If you want someone who loves to turn numbers into strategy and hustle into results, that's me!  
-    </p>
+  <section class="projects">
+    <div class="card">
+      <img src="joeylee_portfolio_images/netflix_strategy_chart.png" alt="Netflix Chart">
+      <h3>Netflix Pricing Strategy</h3>
+      <p>Churn analysis, tiered pricing, and global strategy.</p>
+      <a href="projects.html#netflix">📂 View Project</a>
+    </div>
+    <div class="card">
+      <img src="joeylee_portfolio_images/icecream_sentiment.png" alt="Ice Cream Chart">
+      <h3>Ice Cream Consumer Sentiment</h3>
+      <p>NLP & predictive modeling to uncover top flavors.</p>
+      <a href="projects.html#icecream">📂 View Project</a>
+    </div>
   </section>
-
- <section class="projects">
-
-  <div class="card">
-    <h3>🏥 Abbott Biowearables Strategy</h3>
-    <p>Analyzed Abbott's CGM devices and healthcare economics to assess long-term value in chronic care and digital health adoption.</p>
-    <img src="joeylee_portfolio_images/abbott_chart.png" alt="Abbott Data Chart">
-    <a href="projects.html#abbott">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Explored growth opportunities for Abbott’s wearable CGMs using healthcare cost modeling, competitive positioning, and patient usability trends.<br><br>
-      <strong>Result:</strong> Developed a 3-step go-to-market strategy that increased accessibility, reduced projected hospital readmission rates by 8%, and identified a $1.2B market expansion opportunity.
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>📊 Dating App Dynamics</h3>
-    <p>Performed statistical tests to explore gender-based differences in Tinder match rates and dating outcomes.</p>
-    <img src="joeylee_portfolio_images/tinder_trends.png" alt="Dating Analysis">
-    <a href="projects.html#tinder">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Analyzed behavioral data across 300+ profiles to identify swipe patterns, message frequency, and match conversion by gender.<br><br>
-      <strong>Result:</strong> Found that women match more efficiently but men initiate 70% of conversations. Insights helped redesign match algorithm logic to boost engagement by 18%.
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>💄 Skincare Recommendation Engine</h3>
-    <p>Built ML models to classify and recommend cosmetic products based on skin type and price sensitivity using clustering and random forest.</p>
-    <img src="joeylee_portfolio_images/skincare_model.png" alt="Skin Type Classification">
-    <a href="projects.html#skincare">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Clustered 2,000+ skincare reviews by ingredient and user skin profile to match products with ideal users.<br><br>
-      <strong>Result:</strong> Delivered personalized recommendations with 85% prediction accuracy and designed a filter logic for ecommerce search UX.
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>✈️ Sun Country Airline Segmentation</h3>
-    <p>Segmented customers into five personas using K-means clustering and designed marketing strategies to target loyalty and seasonal travelers.</p>
-    <img src="joeylee_portfolio_images/sun_country_clusters.png" alt="Cluster Graph">
-    <a href="projects.html#suncountry">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Used clustering to group 15K customers by travel habits, spend, and booking behavior.<br><br>
-      <strong>Result:</strong> Created 5 tailored traveler personas and proposed targeted pricing and loyalty incentives, projected to increase bookings by 12% per segment.
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>📉 Netflix Pricing Strategy</h3>
-    <p>Developed customer segmentation and tiered pricing solutions to address churn and competition in the streaming market.</p>
-    <img src="joeylee_portfolio_images/netflix_strategy.png" alt="Netflix Strategy Chart">
-    <a href="projects.html#netflix">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Conducted survey-based segmentation and sensitivity analysis on Netflix pricing tiers across U.S. users.<br><br>
-      <strong>Result:</strong> Proposed a 3-tier loyalty pricing model that aligned value perception with price — reducing churn risk by 22% in at-risk users.
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>🍦 Ice Cream Consumer Sentiment</h3>
-    <p>Used sentiment analysis and ingredient breakdown to predict top-performing ice cream flavors across major brands.</p>
-    <img src="joeylee_portfolio_images/icecream_sentiment.png" alt="Ice Cream Sentiment Chart">
-    <a href="projects.html#icecream">📂 View Project</a>
-    <div class="project-details">
-      <strong>Summary:</strong> Processed 21K online reviews using NLP to uncover trends in consumer preferences and negative sentiment drivers.<br><br>
-      <strong>Result:</strong> Identified caramel, chocolate, and texture as top drivers of 5-star ratings. Built a flavor predictor model with 81% accuracy.
-    </div>
-  </div>
-
-</section>
-
-  <footer>
-    Made with love by Joey Lee <3 | <a href="https://www.linkedin.com/in/joeylee7" target="_blank">LinkedIn</a>
-  </footer>
-
-  <script>
-    // Scroll animation
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => {
-      observer.observe(card);
-    });
-  </script>
 </body>
 </html>
-
 
