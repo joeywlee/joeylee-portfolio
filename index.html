@@ -21,10 +21,16 @@
       font-size: 3rem;
       color: #b03060;
     }
+    p {
+      font-size: 1.1rem;
+      color: #6b4b5b;
+      margin: 0.5rem auto;
+    }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
+      margin-top: 2rem;
     }
     .card {
       background: #ffeaf2;
@@ -32,6 +38,11 @@
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(247, 143, 179, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 14px rgba(247, 143, 179, 0.3);
     }
     .card img {
       width: 100%;
@@ -41,38 +52,80 @@
       color: #b03060;
       margin-top: 1rem;
     }
+    .card p {
+      font-size: 1rem;
+      color: #4a2c35;
+    }
     .card a {
       display: inline-block;
       margin-top: 1rem;
       text-decoration: none;
       background: #f78fb3;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.25rem;
       border-radius: 8px;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .card a:hover {
+      background: #e7679f;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <img src="joeylee_portfolio_images/joey-profile.JPG" alt="Joey Lee headshot" style="width:150px; height:150px; border-radius:50%; object-fit:cover; border: 4px solid #f8c1d3;">
     <h1>Joey Lee</h1>
-    <p>✨ Data Storyteller | Creative Strategist | MSBA @ UC Irvine ✨</p>
+    <p>✨ MSBA @ UC Irvine | Data Storyteller | Creative Strategist ✨</p>
+    <p>Using data, design, and storytelling to drive decisions that connect brands with people.</p>
   </header>
 
   <section class="projects">
     <div class="card">
       <img src="joeylee_portfolio_images/netflix_strategy_chart.png" alt="Netflix Chart">
       <h3>Netflix Pricing Strategy</h3>
-      <p>Churn analysis, tiered pricing, and global strategy.</p>
+      <p>Churn analysis, tiered pricing, and global expansion roadmap.</p>
       <a href="projects.html#netflix">📂 View Project</a>
     </div>
+
     <div class="card">
       <img src="joeylee_portfolio_images/icecream_sentiment.png" alt="Ice Cream Chart">
       <h3>Ice Cream Consumer Sentiment</h3>
-      <p>NLP & predictive modeling to uncover top flavors.</p>
+      <p>NLP & predictive modeling to uncover top-performing flavors by sentiment.</p>
       <a href="projects.html#icecream">📂 View Project</a>
     </div>
+
+    <div class="card">
+      <img src="joeylee_portfolio_images/skincare_model.png" alt="Skincare Model">
+      <h3>Skincare Product Match Engine</h3>
+      <p>Clustering and ML to recommend clean beauty products by skin type and budget.</p>
+      <a href="projects.html#skincare">📂 View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="joeylee_portfolio_images/tinder_trends.png" alt="Tinder Match Trends">
+      <h3>Tinder Behavioral Analysis</h3>
+      <p>Stats & segmentation to uncover gender differences in match efficiency and strategy.</p>
+      <a href="projects.html#tinder">📂 View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="joeylee_portfolio_images/abbott_chart.png" alt="Abbott Biowearables">
+      <h3>Abbott Biowearables Strategy</h3>
+      <p>Growth roadmap for CGM tech adoption using healthcare economics and use-case modeling.</p>
+      <a href="projects.html#abbott">📂 View Project</a>
+    </div>
+
+    <div class="card">
+      <img src="joeylee_portfolio_images/sun_country_clusters.png" alt="Airline Segmentation">
+      <h3>Sun Country Segmentation</h3>
+      <p>Clustered 15,000 travelers into 5 personas to drive loyalty and pricing strategy.</p>
+      <a href="projects.html#suncountry">📂 View Project</a>
+    </div>
   </section>
+
 </body>
 </html>
+
 
